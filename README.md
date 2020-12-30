@@ -25,5 +25,5 @@ oh-my-zsh sources this custom content via the `ZSH_CUSTOM` environment variable 
 
 ## GitHub
 
-This project can be found on GitHub at [oh-my-zsh Customizations](https://github.com/mark-ingenosity/oh-my-zsh-plugin-pathfinder.git)
+This project can be found on GitHub at [oh-my-zsh Customizations](https://github.com/mark-ingenosity/oh-my-zsh_Customizations)
 
