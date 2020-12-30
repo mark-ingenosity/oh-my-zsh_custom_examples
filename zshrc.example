@@ -1,0 +1,54 @@
+#
+# $Id:$
+#
+# Note: All configuration info has been moved to $ZSH_CUSTOM
+#
+# This is a personal application startup file. It is source at the end
+# of the .zshrc file. Its purpose is to offer people a chance to
+# insert their personal zsh customizations. Why not do it in .zshrc?
+# Because so many of us share the same .zshrc file.
+#
+
+# Set the oh-my-zsh Installation location
+export ZSH="/Users/<username>/.oh-my-zsh"
+
+# Set the oh-my-zsh Custom folder
+export ZSH_CUSTOM=~/.oh-my-zsh_custom
+
+# Load any customizations that need to happen before loading
+# the default oh-my-zsh environment
+if [ -f $ZSH_CUSTOM/zsh_pre_custom.sh ]; then
+	source $ZSH_CUSTOM/zsh_pre_custom.sh
+fi
+
+# Load the default oh-my-zsh Environment
+source $ZSH/oh-my-zsh.sh
+
+# Load any customizations that need to happen after loading
+# the default oh-my-zsh environment
+if [ -f $ZSH_CUSTOM/zsh_post_custom.sh ]; then
+	source $ZSH_CUSTOM/zsh_post_custom.sh
+fi
+
+#############################################################################
+# PATH
+#
+# Notes:
+#  1) Overrides /usr/libexec/path_helper
+#  2) Must come before initializing nvm as nvm will automatically
+#     update PATH to the latest node version (note the v1.1.1 placeholder)
+#############################################################################
+#
+export PATH=.:~/Applications/bin:/opt/local/bin:/opt/local/sbin:/Users/<username>/.pyenv/shims:/Users/<username>/.nvm/versions/node/v1.1.1/bin:/usr/local/go/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/X11/bin
+
+#############################################################################
+# HACKS
+#############################################################################
+#
+# Load any hacks that need to happen after loading .zshrc
+if [ -f $ZSH_CUSTOM/zsh_hacks.sh ]; then
+	source $ZSH_CUSTOM/zsh_hacks.sh
+fi
+
+# Created by `userpath` on 2020-12-26 22:02:22
+export PATH="$PATH:/Users/<username>/.local/bin"
